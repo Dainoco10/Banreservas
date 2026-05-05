@@ -1,0 +1,366 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #e8e8e8;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.phone {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  height: 100vh;
+  height: 100dvh;
+  background: #f2f2f2;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Status Bar */
+.status-bar {
+  display: none;
+}
+
+.status-time {
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.location-dot {
+  width: 16px;
+  height: 16px;
+  background: #3b9de8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-dot::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+}
+
+.status-icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.signal-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 14px;
+}
+
+.bar {
+  width: 3px;
+  background: white;
+  border-radius: 1px;
+}
+.bar:nth-child(1) { height: 4px; }
+.bar:nth-child(2) { height: 7px; }
+.bar:nth-child(3) { height: 10px; }
+.bar:nth-child(4) { height: 13px; opacity: 0.3; }
+
+.wifi-icon {
+  width: 16px;
+  height: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.wifi-arc {
+  border: 2px solid white;
+  border-bottom: none;
+  border-radius: 50% 50% 0 0;
+}
+
+.wifi-arc:nth-child(1) { width: 16px; height: 8px; }
+.wifi-arc:nth-child(2) { width: 10px; height: 5px; }
+.wifi-dot {
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  margin-top: -1px;
+}
+
+.battery {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.battery-body {
+  width: 24px;
+  height: 12px;
+  border: 1.5px solid white;
+  border-radius: 3px;
+  padding: 2px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.battery-fill {
+  width: 4px;
+  height: 7px;
+  background: #e74c3c;
+  border-radius: 1px;
+}
+
+.battery-cap {
+  width: 2px;
+  height: 6px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 0 2px 2px 0;
+}
+
+/* Header */
+.header {
+  background: #0a4a6e;
+  padding: calc(8px + env(safe-area-inset-top)) calc(20px + env(safe-area-inset-right)) 20px calc(20px + env(safe-area-inset-left));
+  display: flex;
+  align-items: center;
+  gap: 1.5px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-icon {
+  width: 56px;
+  height: 46px;
+  position: relative;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.logo-text {
+  color: white;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+/* Section title */
+.section-title {
+  background: #f0f0f0;
+  text-align: center;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0a4a6e;
+  border-bottom: 1px solid #ddd;
+}
+
+.accounts-list + .section-title {
+  margin-top: 2px;
+}
+
+/* Account card */
+.accounts-list {
+  background: white;
+  flex: 0 0 auto;
+}
+
+strong {
+  font-size: 15px;
+  color: #828282;
+  font-weight: 100;
+}
+
+.account-item {
+  display: flex;
+  align-items: center;
+  padding: 18px 20px 18px 0;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  animation: slideIn 0.4s ease both;
+  /* Scroll más fluido en items */
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.account-item--link {
+  text-decoration: none;
+  color: inherit;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.account-accent {
+  width: 5px;
+  height: 48px;
+  background: #f5a623;
+  border-radius: 3px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.account-info {
+  flex: 1;
+}
+
+.account-header-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.account-number {
+  font-size: 16px;
+  font-weight: 500;
+  color: #4f4f4f;
+}
+
+.divider-line {
+  width: 1px;
+  height: 16px;
+  background: #727272;
+}
+
+.account-type {
+  font-size: 15px;
+  font-weight: 500;
+  color: #424242;
+}
+
+.account-balance-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.account-balance-row > div {
+  text-align: right;
+}
+
+.balance-amount {
+  font-size: 15px;
+  color: #555;
+  font-weight: 500;
+}
+
+.balance-label {
+  font-size: 13px;
+  color: #999;
+  font-weight: 400;
+}
+
+/* Bottom Nav */
+.bottom-nav {
+  background: white;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  padding: 10px calc(env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) calc(env(safe-area-inset-left));
+  flex-shrink: 0;
+}
+
+.nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.nav-item:active {
+  opacity: 0.6;
+}
+
+.nav-icon {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Material Symbols icon (Transferencias) */
+.nav-item .material-symbols-outlined.icon {
+  font-size: 24px;
+  line-height: 1;
+  color: #7b7b7b;
+}
+
+.nav-item.active .material-symbols-outlined.icon {
+  color: #3b9de8;
+}
+
+.nav-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #999;
+}
+
+.nav-item.active .nav-label {
+  color: #3b9de8;
+}
+
+.nav-item.active .nav-icon svg path {
+  fill: #3b9de8;
+  stroke: #3b9de8;
+}
+
+.nav-icon--circle {
+  width: 26px;
+  height: 26px;
+  border: 2px solid #949393;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-icon--circle ion-icon {
+  font-size: 16px;
+  color: #8f8f8f;
+  display: block;
+  line-height: 1;
+}
+
+.nav-item.active .nav-icon--circle {
+  border-color: #3b9de8;
+}
+
+.nav-item.active .nav-icon--circle ion-icon {
+  color: #3b9de8;
+}
+

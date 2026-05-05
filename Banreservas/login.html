@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banreservas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <noscript><script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script></noscript>
+    <link rel="stylesheet" href="indes.css">
+</head>
+<body>
+    <div class="iconos">
+        <ion-icon name="arrow-back-outline" onclick="history.back()"></ion-icon>
+    </div>
+    
+    <div class="logo">
+        <img src="Banreservas.png" alt="Banreservas Logo" class="logo-img">
+        <h1 class="logo-text">BANRESERVAS</h1>
+    </div>
+    
+    <form class="cards" id="loginForm" autocomplete="off">
+        <div class="card">
+            <input type="text" id="usuario" placeholder="Usuario o Cédula" required>
+            <i class="fa fa-user-o" aria-hidden="true"></i>
+        </div>
+        <div class="card">
+            <input type="password" id="contrasena" placeholder="Contraseña">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+        </div>
+
+        <button type="submit">ACCEDER</button>
+    </form>
+
+    <a href="#" class="link">¿Olvidaste tu contraseña?</a>
+    <a href="terminos.html" class="link">Términos y condiciones</a>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const usuario = document.getElementById('usuario').value.trim();
+            if (!usuario) {
+                alert('Por favor escribe tu usuario');
+                return;
+            }
+
+            window.location.href = 'App.html';
+        });
+    </script>
+  
+</body>
+</html>

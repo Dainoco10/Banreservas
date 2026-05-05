@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+ 
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Banreservas</title>
+<link rel="stylesheet" href="App.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+ 
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<noscript><script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script></noscript>
+ 
+<style>
+  /* El scroll SOLO vive en este contenedor */
+  .scroll-zone {
+    overflow: hidden;          /* JS controla el scroll, no el browser */
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 0;
+    background: #ffffff;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+ 
+  .scroll-zone.grabbing {
+    cursor: grabbing;
+  }
+ 
+  /* El inner se mueve con transform via JS */
+  .scroll-inner {
+    will-change: transform;
+    transform: translateY(0px);
+    transition: none; /* JS maneja la inercia */
+  }
+ 
+  /* Sombra sutil que indica que hay más contenido abajo */
+  .scroll-zone::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 24px;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.9));
+    pointer-events: none;
+    z-index: 2;
+  }
+</style>
+ 
+</head>
+<body>
+ 
+<div class="phone">
+ 
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-time">
+      12:39
+      <div class="location-dot"></div>
+    </div>
+    <div class="status-icons">
+      <div class="signal-bars">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="wifi-icon">
+        <div class="wifi-arc"></div>
+        <div class="wifi-arc"></div>
+        <div class="wifi-dot"></div>
+      </div>
+      <div class="battery">
+        <div class="battery-body">
+          <div class="battery-fill"></div>
+        </div>
+        <div class="battery-cap"></div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Header FIJO arriba -->
+  <div class="header">
+    <div class="logo-icon">
+      <img class="logo-img" src="Banreservas.png" alt="Logo Banreservas">
+    </div>
+    <div class="logo-text">BANRESERVAS</div>
+  </div>
+ 
+  <!-- ZONA DE SCROLL CONTROLADA POR JS -->
+  <div class="scroll-zone" id="scrollZone">
+    <div class="scroll-inner" id="scrollInner">
+ 
+      <!-- Section: Cuentas -->
+      <div class="section-title">Cuentas</div>
+      <div class="accounts-list">
+        <a class="account-item account-item--link" href="index1.html" aria-label="Ver detalles de la cuenta *1412">
+          <div class="account-accent"></div>
+          <div class="account-info">
+            <div class="account-header-row">
+              <span class="account-number">*3296</span>
+              <div class="divider-line"></div>
+              <span class="account-type">Cuenta de ahorro</span>
+            </div>
+            <strong>DOP</strong> 
+              <span class="balance-amount">1,600,000.47</span>
+            <div class="account-balance-row">
+              <div>
+              <span class="balance-label">Balance disponible</span>
+              </div>
+            </div>
+          </div>
+        </a>
+ 
+        <div class="account-item">
+          <div class="account-accent"></div>
+          <div class="account-info">
+            <div class="account-header-row">
+              <span class="account-number">*6540</span>
+              <div class="divider-line"></div>
+              <span class="account-type">Cuenta de ahorro</span>
+            </div>
+            <strong>DOP</strong> 
+              <span class="balance-amount">460,900.27</span>
+            <div class="account-balance-row">
+              <div>
+              <span class="balance-label">Balance disponible</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Section: Tarjetas -->
+      <div class="section-title">Tarjetas de crédito</div>
+      <div class="account-item">
+          <div class="account-accent"></div>
+          <div class="account-info">
+            <div class="account-header-row">
+              <span class="account-number">*6540</span>
+              <div class="divider-line"></div>
+              <span class="account-type">Visa</span>
+            </div>
+            <strong>DOP</strong> 
+              <span class="balance-amount">100,000.00</span>
+            <div class="account-balance-row">
+              <div>
+              <span class="balance-label">Balance disponible</span>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+    </div><!-- /scroll-inner -->
+  </div><!-- /scroll-zone -->
+ 
+  <!-- Bottom Nav FIJO abajo -->
+  <div class="bottom-nav">
+ 
+    <div class="nav-item active">
+      <div class="nav-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M3 12L12 3L21 12V21H15V15H9V21H3V12Z" fill="#3b9de8"/>
+        </svg>
+      </div>
+      <span class="nav-label">Inicio</span>
+    </div>
+ 
+    <div class="nav-item">
+      <span class="material-symbols-outlined icon">swap_horiz</span>
+      <span class="nav-label">Transferencias</span> 
+    </div>
+ 
+    <div class="nav-item">
+      <div class="nav-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="9" stroke="#999" stroke-width="2"/>
+          <line x1="9" y1="12" x2="15" y2="12" stroke="#999" stroke-width="2" stroke-linecap="round"/>
+          <line x1="12" y1="9" x2="12" y2="15" stroke="#999" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="nav-label">Solicitudes</span>
+    </div>
+ 
+    <div class="nav-item">
+      <div class="nav-icon nav-icon--circle">
+        <ion-icon name="person"></ion-icon>
+      </div>
+      <span class="nav-label">Más</span>
+    </div>
+ 
+  </div>
+ 
+</div><!-- /phone -->
+ 
+<script>
+  const zone  = document.getElementById('scrollZone');
+  const inner = document.getElementById('scrollInner');
+ 
+  let currentY   = 0;   // posición actual del inner
+  let targetY    = 0;   // posición objetivo (donde queremos llegar)
+  let velocityY  = 0;   // velocidad actual (para inercia)
+  let rafId      = null;
+ 
+  // Variables de arrastre (mouse/touch)
+  let isDragging = false;
+  let startPointerY = 0;
+  let startScrollY  = 0;
+  let lastPointerY  = 0;
+  let lastTime      = 0;
+  let dragVelocity  = 0;
+ 
+  /* ---- Límites de scroll ---- */
+  function getMaxScroll() {
+    return Math.max(0, inner.scrollHeight - zone.clientHeight);
+  }
+ 
+  /* ---- Clamp con rebote suave ---- */
+  function clamp(val, min, max) {
+    if (val < min) return min + (val - min) * 0.25;  // rebote arriba
+    if (val > max) return max + (val - max) * 0.25;  // rebote abajo
+    return val;
+  }
+ 
+  /* ---- Loop de animación con inercia ---- */
+  function animate() {
+    const maxScroll = getMaxScroll();
+ 
+    // Interpolación suave hacia targetY
+    const diff = targetY - currentY;
+    velocityY = diff * 0.12 + velocityY * 0.0; // spring hacia target
+ 
+    if (!isDragging) {
+      // Inercia libre: velocidad decae
+      targetY += velocityY;
+      velocityY *= 0.88;
+ 
+      // Rebote de vuelta si pasa los límites
+      if (targetY < 0)         targetY += (0 - targetY)         * 0.18;
+      if (targetY > maxScroll) targetY += (maxScroll - targetY) * 0.18;
+    }
+ 
+    currentY = currentY + (targetY - currentY) * 0.18;
+ 
+    // Clamp visual para no salirse demasiado
+    const displayY = -clamp(currentY, 0, maxScroll);
+    inner.style.transform = `translateY(${displayY}px)`;
+ 
+    // Seguir animando si hay movimiento
+    const moving = Math.abs(targetY - currentY) > 0.1 || Math.abs(velocityY) > 0.1;
+    if (moving) {
+      rafId = requestAnimationFrame(animate);
+    } else {
+      rafId = null;
+    }
+  }
+ 
+  function startAnimate() {
+    if (!rafId) rafId = requestAnimationFrame(animate);
+  }
+ 
+  /* ---- EVENTOS TOUCH (móvil) ---- */
+  zone.addEventListener('touchstart', (e) => {
+    const touch = e.touches[0];
+    isDragging     = true;
+    startPointerY  = touch.clientY;
+    startScrollY   = currentY;
+    lastPointerY   = touch.clientY;
+    lastTime       = Date.now();
+    dragVelocity   = 0;
+    velocityY      = 0;
+    zone.classList.add('grabbing');
+    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+  }, { passive: true });
+ 
+  zone.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const touch = e.touches[0];
+    const now   = Date.now();
+    const dt    = now - lastTime || 1;
+ 
+    dragVelocity  = (lastPointerY - touch.clientY) / dt * 16;
+    lastPointerY  = touch.clientY;
+    lastTime      = now;
+ 
+    const delta = startPointerY - touch.clientY;
+    const maxScroll = getMaxScroll();
+    targetY = clamp(startScrollY + delta, 0, maxScroll);
+    currentY = targetY;
+ 
+    inner.style.transform = `translateY(${-currentY}px)`;
+  }, { passive: false });
+ 
+  zone.addEventListener('touchend', () => {
+    isDragging = false;
+    zone.classList.remove('grabbing');
+    velocityY = dragVelocity * 6;   // impulso inicial de inercia
+    targetY += velocityY;
+    startAnimate();
+  });
+ 
+  /* ---- EVENTOS MOUSE (desktop) ---- */
+  zone.addEventListener('mousedown', (e) => {
+    isDragging    = true;
+    startPointerY = e.clientY;
+    startScrollY  = currentY;
+    lastPointerY  = e.clientY;
+    lastTime      = Date.now();
+    dragVelocity  = 0;
+    velocityY     = 0;
+    zone.classList.add('grabbing');
+    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+    e.preventDefault();
+  });
+ 
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    const now = Date.now();
+    const dt  = now - lastTime || 1;
+ 
+    dragVelocity = (lastPointerY - e.clientY) / dt * 16;
+    lastPointerY = e.clientY;
+    lastTime     = now;
+ 
+    const delta = startPointerY - e.clientY;
+    const maxScroll = getMaxScroll();
+    targetY  = clamp(startScrollY + delta, 0, maxScroll);
+    currentY = targetY;
+ 
+    inner.style.transform = `translateY(${-currentY}px)`;
+  });
+ 
+  window.addEventListener('mouseup', () => {
+    if (!isDragging) return;
+    isDragging = false;
+    zone.classList.remove('grabbing');
+    velocityY = dragVelocity * 6;
+    targetY  += velocityY;
+    startAnimate();
+  });
+ 
+  /* ---- RUEDA DEL MOUSE ---- */
+  zone.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    const maxScroll = getMaxScroll();
+    targetY = Math.max(0, Math.min(maxScroll, targetY + e.deltaY * 0.8));
+    velocityY = 0;
+    startAnimate();
+  }, { passive: false });
+</script>
+ 
+</body>
+</html>

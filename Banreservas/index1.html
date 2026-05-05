@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Banreservas</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+<div class="phone">
+
+ 
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-top">
+      <a class="back-btn" href="App.html" aria-label="Volver" onclick="if (history.length > 1) { history.back(); return false; }">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M12 5l-7 7 7 7"/>
+        </svg>
+        <span>Cuenta de ahorro</span>
+      </a>
+      <div class="header-actions">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/>
+          <polyline points="16 6 12 2 8 6"/>
+          <line x1="12" y1="2" x2="12" y2="15"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="acct-label">Cuenta de ahorro</div>
+    <div class="acct-row">
+      <div class="acct-num">
+        9608163296
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2">
+          <rect x="9" y="9" width="13" height="13" rx="2"/>
+          <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+        </svg>
+      </div>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round">
+        <polyline points="9 18 15 12 9 6"/>
+      </svg>
+    </div>
+
+    <hr class="sep">
+
+    <div class="balance-label">Balance disponible</div>
+    <div class="balance-amount">DOP 1,600,000.47</div>
+
+    <div class="actions">
+      <div class="action-btn">
+        <div class="ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="5" width="20" height="14" rx="2"/>
+            <line x1="2" y1="10" x2="22" y2="10"/>
+          </svg>
+        </div>
+        <div class="lbl">Pagos</div>
+      </div>
+      <div class="action-btn">
+        <div class="ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/>
+          </svg>
+        </div>
+        <div class="lbl">Servicios</div>
+      </div>
+      <div class="action-btn">
+        <div class="ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="6" width="20" height="12" rx="2"/>
+            <circle cx="12" cy="12" r="2"/>
+            <path d="M6 12h.01M18 12h.01"/>
+          </svg>
+        </div>
+        <div class="lbl">TuEfectivo</div>
+      </div>
+      <div class="action-btn">
+        <div class="ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round">
+            <circle cx="5" cy="12" r="1" fill="white"/>
+            <circle cx="12" cy="12" r="1" fill="white"/>
+            <circle cx="19" cy="12" r="1" fill="white"/>
+          </svg>
+        </div>
+        <div class="lbl">Más</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <div class="body">
+    <div class="section-header">
+      <span class="section-title">Últimos movimientos</span>
+      <span class="ver-todos">Ver todos ›</span>
+    </div>
+
+    <div class="date-label">Mayo 05, 2026</div>
+
+    <!-- TX 1 -->
+    <div class="transaction">
+      <div class="tx-icon out">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="19" x2="12" y2="5"/>
+          <polyline points="5 12 12 5 19 12"/>
+        </svg>
+      </div>
+      <div class="tx-info">
+        <div class="tx-name">160426 SM POLA INDEP...</div>
+        <div class="tx-ref">42320066213</div>
+      </div>
+      <div class="tx-amount neg">- DOP 100,000.00</div>
+    </div>
+
+
+    <!-- TX 2 -->
+    <div class="transaction">
+      <div class="tx-icon inc">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d4f7c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"/>
+          <polyline points="19 12 12 19 5 12"/>
+        </svg>
+      </div>
+      <div class="tx-info">
+        <div class="tx-name">CR TRANSFERENCIA A A...</div>
+        <div class="tx-ref">203260103831134</div>
+      </div>
+      <div class="tx-amount pos">+ DOP 100,000.00</div>
+    </div>
+
+     <!-- TX 3 -->
+    <div class="transaction">
+      <div class="tx-icon out">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="19" x2="12" y2="5"/>
+          <polyline points="5 12 12 5 19 12"/>
+        </svg>
+      </div>
+      <div class="tx-info">
+        <div class="tx-name">SUPERMERCAD...</div>
+        <div class="tx-ref">423200662139867</div>
+      </div>
+      <div class="tx-amount neg">- DOP 100,000.00</div>
+    </div>
+
+    <!-- TX 4 -->
+    <div class="transaction">
+      <div class="tx-icon inc">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d4f7c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"/>
+          <polyline points="19 12 12 19 5 12"/>
+        </svg>
+      </div>
+      <div class="tx-info">
+        <div class="tx-name">CR TRANSFERENCIA A A...</div>
+        <div class="tx-ref">203260103831134</div>
+      </div>
+      <div class="tx-amount pos">+ DOP 10,000.00</div>
+    </div>
+
+    <!-- TX 5 -->
+    <div class="transaction">
+      <div class="tx-icon out">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="19" x2="12" y2="5"/>
+          <polyline points="5 12 12 5 19 12"/>
+        </svg>
+      </div>
+      <div class="tx-info">
+        <div class="tx-name">100426 SUPERMERCAD...</div>
+        <div class="tx-ref">1422112345107753</div>
+      </div>
+      <div class="tx-amount neg">- DOP 50,527.00</div>
+    </div>
+
+    <!-- TX 6 -->
+    <div class="transaction">
+      <div class="tx-icon out">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="19" x2="12" y2="5"/>
+          <polyline points="5 12 12 5 19 12"/>
+        </svg>
+      </div>
+      <div class="tx-info">
+        <div class="tx-name">010526 AMAZON.COM</div>
+        <div class="tx-ref">225911234931200</div>
+      </div>
+      <div class="tx-amount neg">- DOP 15,176.00</div>
+    </div>
+
+    <div class="date-label">Mayo 01, 2026</div>
+    <div class="transaction">
+      <div class="tx-icon inc">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d4f7c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"/>
+          <polyline points="19 12 12 19 5 12"/>
+        </svg>
+      </div>
+      <div class="tx-info">
+        <div class="tx-name">CR TRANSFERENCIA A A...</div>
+        <div class="tx-ref">203260103831134</div>
+      </div>
+      <div class="tx-amount pos">+ DOP 10,000.00</div>
+    </div>
+
+  </div>
+
+  <div class="bottom-hint">effreg 3gr4g4g4g</div>
+
+
+</div>
+
+
+</body>
+</html>

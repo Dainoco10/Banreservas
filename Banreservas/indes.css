@@ -1,0 +1,139 @@
+:root {
+    --azul-oscuro: #156598;
+    --azul-claro: #1AB5F1;
+    --naranja: #F78F25;
+}
+
+
+body {
+    background-color: #0a486f;
+}
+
+.iconos {
+    color:aliceblue;
+    font-size: 30px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 95px;
+    height: auto;
+}
+
+h1 {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 150px;
+  width: 90%;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 0;
+  background-color: white;
+  border: none;
+  border-radius: 0;
+  border-bottom: none;
+  position: relative;
+}
+
+.card:first-child {
+  border-radius: 2px 2px 0 0;
+}
+
+.card:first-child::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 93%;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+.card:last-of-type {
+  border-radius: 0 0 2px 2px;
+  border-bottom: none;
+}
+
+.card input {
+  flex: 1;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+  background: transparent;
+  color: #333;
+  font-size: 16px;
+  outline: none;
+}
+
+.card input::placeholder {
+  color: #999;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.card i,
+.card ion-icon {
+  color: #999;
+  font-size: 24px;
+  flex-shrink: 0;
+  padding-right: 0px;
+}
+
+
+i {
+    color: white;
+    font-size: 30px;
+}
+
+button {
+    margin-top: 15px;
+    border-radius: 2px;
+    border: none;
+    background-color: #acadad;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.link:last-of-type {
+    margin-top: 170px;
+}
+
+
+
+
+
+
+
+

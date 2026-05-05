@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banreservas</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <noscript><script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script></noscript>
+    <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+    <div class="menu-button" onclick="toggleMenu()">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+   <div class="container"></div>
+    <div class="logo">
+        <img src="Banreservas.png" alt="Banreservas Logo" class="logo">
+        <h1 class="logo-text">BANRESERVAS</h1>
+    </div>
+    <div class="welcome-message">
+        <h2>
+            <span class="linea1">Bienvenido a tu</span><br>
+            <span class="linea2">Web Banreservas</span>
+        </h2>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+         <i class="fas fa-wallet"></i>
+         <p>Billetera</p> 
+        </div>
+
+        <div class="card">
+            <i class="fas fa-unlock-alt"></i>
+            <p>Token Digital</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-commenting" aria-hidden="true"></i>
+            <p>Alma</p>
+        </div>
+
+    </div>
+    <a href="login.html" class="start-button">Acceder</a>
+
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
